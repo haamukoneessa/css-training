@@ -4,28 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Медиа-запросы для разных устройств</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            font-weight: bold;
+        }
+
+        li {
+            background-color: rgb(247, 223, 180);
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+    <title>Flex-список меню</title>
 </head>
 
 <body>
-
-    <div class="header">
-        <h1>
-            <s>Магия</s> @media
-        </h1>
-    </div>
-
-    <div class="main-content">
-        <p>Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты.</p>
-        <p>Сих единственное курсивных родного, речью большой правилами жаренные буквоград! Правилами?</p>
-        <p>Подзаголовок парадигматическая напоивший власти необходимыми повстречался запятых до первую решила?</p>
-    </div>
-
-    <div class="footer">
-        <p>&copy; <a href="http://ksergey.ru">ksergey.ru</a> 2024 </p>
-    </div>
-
+    <ul class="menu">
+        <li>Главная</li>
+        <li>О&nbsp;нас</li>
+        <li>Услуги</li>
+        <li>Портфолио</li>
+        <li>Контакты</li>
+    </ul>
 </body>
 
 </html>
