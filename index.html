@@ -4,104 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шахматная доска</title>
     <style>
-        .chessboard {
+        .container {
             display: grid;
-            width: 400px;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(8, 1fr);
+            color: white;
+            grid-template-columns: 300px auto minmax(200px, 300px);
+            grid-template-rows: repeat(3, 100px) 70px;
+            gap: 10px;
         }
 
-        .square {
-            width: 50px;
-            height: 50px;
-        }
-
-        .white {
-            background-color: #eae0d0;
-        }
-
-        .black {
-            background-color: #594a3d;
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #465f68;
         }
     </style>
+    <title>Grid Layout</title>
 </head>
 
 <body>
-    <div class="chessboard">
-        <!-- Клетки шахматной доски -->
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <!-- Черные клетки -->
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <!-- и так далее, чтобы заполнить всю доску -->
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
+    <div class="container">
+        <div class="item fixed">300px x 100px</div>
+        <div class="item expands">😎 ??? x 100px</div>
+        <div class="item flexible">200px — 300px x 100px</div>
+        <div class="item fixed">300px x 100px</div>
+        <div class="item expands">😎 ??? x 100px</div>
+        <div class="item flexible">200px — 300px x 100px</div>
+        <div class="item fixed">300px x 100px</div>
+        <div class="item expands">😎 ??? x 100px</div>
+        <div class="item flexible">200px — 300px x 100px</div>
 
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
+        <div class="item fixed">🤪 300px x 70px</div>
     </div>
 </body>
 
