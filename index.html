@@ -4,39 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
     <style>
-        .container {
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             display: grid;
-            color: white;
-            grid-template-columns: 300px auto minmax(200px, 300px);
-            grid-template-rows: repeat(3, 100px) 70px;
-            gap: 10px;
+            grid-template-columns: 10% 90%;
+            grid-template-rows: 10% 80% 10%;
         }
 
-        .item {
+        .header,
+        .footer {
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #465f68;
+            background-color: rgb(90, 90, 90);
+            grid-column: span 2;
+        }
+
+        .aside {
+            background-color: rgb(157, 157, 157);
+            color: white;
+            padding: 10px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: rgb(185, 185, 185);
+            padding: 10px;
+        }
+
+        @media (max-width: 760px) {
+            .main {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+            }
         }
     </style>
-    <title>Grid Layout</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="item fixed">300px x 100px</div>
-        <div class="item expands">😎 ??? x 100px</div>
-        <div class="item flexible">200px — 300px x 100px</div>
-        <div class="item fixed">300px x 100px</div>
-        <div class="item expands">😎 ??? x 100px</div>
-        <div class="item flexible">200px — 300px x 100px</div>
-        <div class="item fixed">300px x 100px</div>
-        <div class="item expands">😎 ??? x 100px</div>
-        <div class="item flexible">200px — 300px x 100px</div>
-
-        <div class="item fixed">🤪 300px x 70px</div>
+    <div class="header">Header</div>
+    <div class="aside">Side Panel</div>
+    <div class="main">
+        <div class="section">Content Section 1</div>
+        <div class="section">Content Section 2</div>
+        <div class="section">Content Section 3</div>
     </div>
+    <div class="footer">Footer</div>
 </body>
 
 </html>
